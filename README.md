@@ -1,5 +1,5 @@
 # CookieMonster
-
+0.1.0
 A swift package to return a random Fortune Cookie
 
 Usage:
