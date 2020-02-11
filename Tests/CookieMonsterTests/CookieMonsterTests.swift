@@ -2,14 +2,16 @@ import XCTest
 @testable import CookieMonster
 
 final class CookieMonsterTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(CookieMonster().text, "Hello, World!")
-    }
+    func testDifferentEachTime() {
 
+        let a = CookieMonster.get_fortune_cookie()
+        let b = CookieMonster.get_fortune_cookie()
+        let c = CookieMonster.get_fortune_cookie()
+        XCTAssertNotEqual(a,b)
+         XCTAssertNotEqual(a,c)
+         XCTAssertNotEqual(b,c)
+  }
     static var allTests = [
-        ("testExample", testExample),
+        ("testDifferentEachTime", testDifferentEachTime),
     ]
 }
